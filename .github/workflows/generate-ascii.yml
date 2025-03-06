@@ -8,7 +8,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - name: Execute ascii-art.sh
+      - name: Execute ascii-script.sh
         run: |
-          sudo chmod +x ascii-art.sh
-          ./ascii-art.sh
+          sudo chmod +x ascii-script.sh
+          ./ascii-script.sh
