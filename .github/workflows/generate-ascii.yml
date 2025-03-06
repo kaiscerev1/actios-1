@@ -8,14 +8,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         
-      - name: Install CowSay program
+      - name: Execute ascii-art.sh
         run: |
-          sudo apt-get update
-          sudo apt-get install cowsay -y
-          
-      - name: Generate ASCII Art
-        run: |
-            cowsay -f dragon "Run for cover, Iam a dragon!" >> dragon.txt
-            grep -i "dragon" dragon.txt
-            cat dragon.txt
-            ls -ltra
+          sudo chmod +x ascii-art.sh
+          ./ascii-art.sh
