@@ -10,5 +10,6 @@ jobs:
         
       - name: Execute ascii-script.sh
         run: |
+          ls -ltra
           sudo chmod +x ascii-script.sh
           ./ascii-script.sh
