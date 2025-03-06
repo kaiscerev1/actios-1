@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Welcome to my first workflow
-        run: echo "Hello, world!"
-      - name: list files
-        run: ls -ltra
-      - name: Read file
-        run: cat README.md
+        
+      - name: List and read files
+        run: |
+          echo "Hello, World!"
+          ls -ltra
+          cat README.md
