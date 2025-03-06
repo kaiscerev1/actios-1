@@ -7,9 +7,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Execute ascii-script.sh
+
+      - name: List documents
         run: |
           ls -ltra
-          sudo chmod +x ascii-script.sh
+        
+      - name: Execute ascii-script
+        run: |
+          chmod +x ascii-script.sh
           ./ascii-script.sh
