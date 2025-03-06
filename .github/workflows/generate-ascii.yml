@@ -13,6 +13,7 @@ jobs:
           ls -ltra
         
       - name: Execute ascii-script
+      #  working-directory: ./.github/workflows/
         run: |
-          chmod +x ./.github/workflows/ascii-script.sh
-          ./.github/workflows/ascii-script.sh
+          chmod +x ascii-script.sh
+          ./ascii-script.sh
