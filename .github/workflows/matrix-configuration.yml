@@ -1,6 +1,6 @@
 name: Matrix Job
 on:
-    # push:
+    push:
     #   branches:
     #     - main
     workflow_dispatch:
@@ -8,7 +8,7 @@ jobs:
     Deploy:
         strategy:
             matrix:
-                os: [ubuntu-latest, ubuntu-20-04, windows-latest]
+                os: [ubuntu-latest, ubuntu-20-04]
                 images: [hello-world, alpine]
         runs-on: ${{ matrix.os}}
         steps:
