@@ -1,10 +1,9 @@
 name: Matrix Job
 on:
-    push:
-      branches:
-        - main
+    # push:
+    #   branches:
+    #     - main
     workflow_dispatch:
-
 jobs:
     Deploy:
         strategy:
@@ -17,4 +16,4 @@ jobs:
               run: docker info
 
             - name: Run Images
-              run: ${{ matrix.images}}
+              run: docker run ${{ matrix.images}}
